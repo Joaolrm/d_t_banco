@@ -1,7 +1,7 @@
 public abstract class Conta(Pessoa titular, long numero, int agencia, double taxaSaque)
 {
-    private const string SALDO_INSUFICIENTE = "Saldo insuficiente";
-    private const string VALOR_INVALIDO = "Valor inválido";
+    protected const string SALDO_INSUFICIENTE = "Saldo insuficiente";
+    protected const string VALOR_INVALIDO = "Valor inválido";
     private const string ERRO_DESCONHECIDO = "Erro desconhecido";
     private const string VALOR_INVALIDO_SAQUE = "Valor de saque inválido.";
     private const string SALDO_INSUFICIENTE_SAQUE = "Saldo insuficiente para saque.";
@@ -11,7 +11,7 @@ public abstract class Conta(Pessoa titular, long numero, int agencia, double tax
     protected double Saldo { get; set; } = 0;
     public double TaxaSaque { get; set; } = taxaSaque;
 
-    protected void RemoverSaldo(double valor)
+    protected virtual void RemoverSaldo(double valor)
     {
         if (valor > Saldo)
         {
@@ -48,7 +48,12 @@ public abstract class Conta(Pessoa titular, long numero, int agencia, double tax
 
     public virtual void Transferir(IDepositavel depositavel, double valor)
     {
-        Sacar(valor);
+        RemoverSaldo(valor);
         depositavel.Depositar(valor);
+    }
+
+    public override string ToString()
+    {
+        return $"{Titular.ToString()}\nNúmero: {Numero}, \nAgência: {Agencia}, \nSaldo: {Saldo}";
     }
 }

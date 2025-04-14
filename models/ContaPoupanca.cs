@@ -13,4 +13,9 @@ class ContaPoupanca(Pessoa pessoa, long numero, int agencia)
     {
         return Titular.Id;
     }
+
+    public override string ToString()
+    {
+        return $"{base.ToString()}, \nTipo: Poupança";
+    }
 }

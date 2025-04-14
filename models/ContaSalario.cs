@@ -2,9 +2,12 @@ class ContaSalario(Pessoa titular, long numero, int agencia, double taxaSaque)
     : Conta(titular, numero, agencia, taxaSaque),
         IDepositavel
 {
+    private const string TRANSFERENCIA_INVALIDA =
+        "Transferência só permitida para contas do mesmo titular.";
+
     public void Depositar(double valor)
     {
-        throw new NotImplementedException();
+        Saldo += valor;
     }
 
     public int getIdDoTitular()
@@ -20,7 +23,12 @@ class ContaSalario(Pessoa titular, long numero, int agencia, double taxaSaque)
         }
         else
         {
-            throw new Exception("Transferência só permitida para contas do mesmo titular.");
+            throw new Exception(TRANSFERENCIA_INVALIDA);
         }
+    }
+
+    public override string ToString()
+    {
+        return $"{base.ToString()}, \nTipo: Salário";
     }
 }

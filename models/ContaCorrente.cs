@@ -2,6 +2,7 @@ using System.Runtime.CompilerServices;
 
 public class ContaCorrente : Conta, IDepositavel
 {
+    private const string CONTA_INVALIDA = "Tipo de conta inválido";
     private readonly string tipo;
     private string Tipo
     {
@@ -32,18 +33,9 @@ public class ContaCorrente : Conta, IDepositavel
         return Titular.Id;
     }
 
-    public ContaCorrente(
-        double limite,
-        double taxaDoLimite,
-        Pessoa titular,
-        long numero,
-        int agencia,
-        double taxaSaque
-    )
+    public ContaCorrente(Pessoa titular, long numero, int agencia, double taxaSaque)
         : base(titular, numero, agencia, taxaSaque)
     {
-        this.limite = limite;
-        this.taxaDoLimite = taxaDoLimite;
         this.tipo = Titular.getRendaOuFaturamento() switch
         {
             > 5000.00 => "ESPECIAL",
@@ -62,7 +54,33 @@ public class ContaCorrente : Conta, IDepositavel
         }
         else
         {
-            throw new Exception("Tipo de conta inválido");
+            throw new Exception(CONTA_INVALIDA);
         }
+    }
+
+    public override string ToString()
+    {
+        return $"{base.ToString()} \nTipo: {Tipo}, \nLimite: {Limite}, \nTaxa do Limite: {TaxaDoLimite}";
+    }
+
+    protected override void RemoverSaldo(double valor)
+    {
+        double consumoLimite = valor - Saldo;
+
+        if (consumoLimite > 0)
+        {
+            double consumoLimiteComTaxa = consumoLimite + (consumoLimite * TaxaDoLimite);
+            valor = Saldo + consumoLimiteComTaxa;
+        }
+        if (valor > Saldo + Limite)
+        {
+            throw new Exception(SALDO_INSUFICIENTE);
+        }
+        if (valor < 0)
+        {
+            throw new Exception(VALOR_INVALIDO);
+        }
+
+        Saldo -= valor;
     }
 }

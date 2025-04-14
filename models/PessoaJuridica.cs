@@ -47,4 +47,9 @@ class PessoaJuridica : Pessoa
     {
         return Faturamento;
     }
+
+    public override string ToString()
+    {
+        return $"{base.ToString()} \nCNPJ: {Cnpj}, \nRazão Social: {RazaoSocial}, \nNome Fantasia: {NomeFantasia}, \nInscrição Estadual: {InscricaoEstadual}, \nData de Abertura: {DataAbertura.ToString("dd/MM/yyyy")}, \nIdade: {Idade}, \nFaturamento: {Faturamento}";
+    }
 }

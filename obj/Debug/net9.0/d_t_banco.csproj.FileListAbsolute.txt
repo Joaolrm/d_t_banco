@@ -12,3 +12,4 @@ c:\Users\01297864\Desktop\pessoal\faculdade\fdw1\d_t_banco\obj\Debug\net9.0\refi
 c:\Users\01297864\Desktop\pessoal\faculdade\fdw1\d_t_banco\obj\Debug\net9.0\d_t_banco.pdb
 C:\Users\01297864\Desktop\pessoal\faculdade\fdw1\d_t_banco\obj\Debug\net9.0\d_t_banco.genruntimeconfig.cache
 C:\Users\01297864\Desktop\pessoal\faculdade\fdw1\d_t_banco\obj\Debug\net9.0\ref\d_t_banco.dll
+c:\Users\01297864\Desktop\pessoal\faculdade\fdw1\d_t_banco\obj\Debug\net9.0\d_t_banco.sourcelink.json

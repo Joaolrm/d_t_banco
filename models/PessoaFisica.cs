@@ -46,4 +46,9 @@ class PessoaFisica : Pessoa
     {
         return Renda;
     }
+
+    public override string ToString()
+    {
+        return $"{base.ToString()}\nNome: {Nome}, \nSobrenome: {Sobrenome}, \nRG: {RG}, \nCPF: {CPF}, \nData de Nascimento: {DataNasc.ToString("dd/MM/yyyy")}, \nIdade: {Idade}, \nFaixa Etária: {FaixaEtaria}, \nRenda: {Renda}";
+    }
 }
