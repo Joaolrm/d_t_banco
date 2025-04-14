@@ -71,5 +71,21 @@ class Program
         {
             Console.WriteLine(e.Message); // Erro esperado estourou o limite
         }
+        PessoaJuridica pj1 = new(
+            123456789, // Example CNPJ
+            "Empresa X", // Example company name
+            "12345678000199", // Example company registration number
+            "60000000000", // Example tax ID
+            new DateTime(2010, 1, 1), // Example foundation date
+            pf1, // Example owner (PessoaFisica object)
+            100000.00, // Example capital
+            "Avenida Principal", // Example address
+            "88888888888", // Example phone number
+            "empresa@email.com" // Example email
+        );
+        Console.WriteLine(pj1);
+        ContaCorrente cc2 = new(pj1, 123456789, 1234, 2.00);
+        cc2.Sacar(1000.00); // Saque bem sucedido
+        Console.WriteLine(cc2);
     }
 }
