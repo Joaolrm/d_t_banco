@@ -1,0 +1,14 @@
+c:\Users\01297864\Desktop\pessoal\faculdade\fdw1\d_t_banco\bin\Debug\net9.0\d_t_banco.exe
+C:\Users\01297864\Desktop\pessoal\faculdade\fdw1\d_t_banco\bin\Debug\net9.0\d_t_banco.deps.json
+C:\Users\01297864\Desktop\pessoal\faculdade\fdw1\d_t_banco\bin\Debug\net9.0\d_t_banco.runtimeconfig.json
+c:\Users\01297864\Desktop\pessoal\faculdade\fdw1\d_t_banco\bin\Debug\net9.0\d_t_banco.dll
+c:\Users\01297864\Desktop\pessoal\faculdade\fdw1\d_t_banco\bin\Debug\net9.0\d_t_banco.pdb
+c:\Users\01297864\Desktop\pessoal\faculdade\fdw1\d_t_banco\obj\Debug\net9.0\d_t_banco.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\01297864\Desktop\pessoal\faculdade\fdw1\d_t_banco\obj\Debug\net9.0\d_t_banco.AssemblyInfoInputs.cache
+c:\Users\01297864\Desktop\pessoal\faculdade\fdw1\d_t_banco\obj\Debug\net9.0\d_t_banco.AssemblyInfo.cs
+c:\Users\01297864\Desktop\pessoal\faculdade\fdw1\d_t_banco\obj\Debug\net9.0\d_t_banco.csproj.CoreCompileInputs.cache
+c:\Users\01297864\Desktop\pessoal\faculdade\fdw1\d_t_banco\obj\Debug\net9.0\d_t_banco.dll
+c:\Users\01297864\Desktop\pessoal\faculdade\fdw1\d_t_banco\obj\Debug\net9.0\refint\d_t_banco.dll
+c:\Users\01297864\Desktop\pessoal\faculdade\fdw1\d_t_banco\obj\Debug\net9.0\d_t_banco.pdb
+C:\Users\01297864\Desktop\pessoal\faculdade\fdw1\d_t_banco\obj\Debug\net9.0\d_t_banco.genruntimeconfig.cache
+C:\Users\01297864\Desktop\pessoal\faculdade\fdw1\d_t_banco\obj\Debug\net9.0\ref\d_t_banco.dll
